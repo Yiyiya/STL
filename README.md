@@ -66,3 +66,29 @@ OOP企图将datas 和methods 关联在一起， GP 是将datas 和methods 分散
 
 # 分配器 allocators
 先谈 operator new() 和 malloc()
+
+## Iterator 需要遵循的原则
+rotate() 需要知道iterators 的三种 associated types
+1. iteractor_traits<_Iter>::iteractor_category() ; 分类
+2. iterator_traits<_rRandomAccessIterator>::difference_type_Distance; 距离
+3. iterator_traits<_rRandomAccessIterator>::value_type_ValueType; 什么值
+4. reference
+5. pointer
+4 和 5 从来没有被使用过
+iterators 必须提供的五种 associated types
+__list_iterator
+iterator_category; value_type; pointer; reference; difference_typr; 
+algorithm 
+I::iterator_category; I::value_type; I::pointer; I::reference; I::difference_typr;
+value_type主要目的是来声明变量
+
+## vector
+
+## array
+## forward_list
+## deque<T>::insert()
+允许指定一个位置，在这个位置上放新的元素进去。
+  
+  
+## 关联式容器
+容器 rb_tree(Red-Black tree, 红黑树)
