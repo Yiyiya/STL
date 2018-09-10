@@ -1,7 +1,46 @@
 # STL与泛函编程
 ## STL体系结构基础介绍
-STL六大部件
-容器（containers）, 分配器(allocators), 算法, 迭代器, 适配器, 仿函式
+### STL六大部件
+容器（containers）, 分配器(allocators), 算法(ALgorithm), 迭代器(Iteration)(泛化的指针), 适配器(Adapters), 仿函式(Functors).
+复杂度，Complexity， Big-oh, N 要很大，工业级的（大于10W）
+"前闭后开“ 区间，c.begin(), c.end().
+begin 指向第一个元素，end 只想最后一个元素的下一个位置（涵盖第一个，不含最后一个元素）。
+```
+Container<T> c:
+...
+Container<T>::iterator ite = c.begin();
+for (i; ite != c.end(); ++ite)
+...
+```
+### range-based for statement (since C++11)
+```
+for (decl : coll) {
+  statement
+ }
+```
+example
+```
+for (int i : {2,3,45,7,9,11,13,17,19}{
+  std::cout << i << std::endl;
+ }
+```
+```
+std::vector<double> vec;
+...
+for(auto elem : vec){
+  std::cout <<< elem << std::endl;
+}
+for(auto elem : vec){
+  elem *= 3;
+}
+```
+### auto keyword (since C++11)
+```
+list<string> c;
+...
+auto ite = :: find(c.begin(), c.end(),tanger);
+```
+
 ## 容器之分类与各种测试
 ## vector
 ## array
