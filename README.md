@@ -2,8 +2,8 @@
 ## STL体系结构基础介绍
 ### STL六大部件
 容器（containers）, 分配器(allocators), 算法(ALgorithm), 迭代器(Iteration)(泛化的指针), 适配器(Adapters), 仿函式(Functors).
-复杂度，Complexity， Big-oh, N 要很大，工业级的（大于10W）
-"前闭后开“ 区间，c.begin(), c.end().
+### 复杂度，Complexity， Big-oh, N 要很大，工业级的（大于10W）
+### "前闭后开“ 区间，c.begin(), c.end().
 begin 指向第一个元素，end 只想最后一个元素的下一个位置（涵盖第一个，不含最后一个元素）。
 ```
 Container<T> c:
